@@ -163,3 +163,9 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\PC-7\\Desktop\\kasir\\public\\index.php')
+CRITICAL - 2024-01-30 07:23:50 --> Cannot redeclare App\Models\M_model::getTotalUsers()
+in APPPATH\Models\M_Model.php on line 232.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-30 07:23:58 --> Cannot redeclare App\Models\M_model::getTotalUsers()
+in APPPATH\Models\M_Model.php on line 232.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

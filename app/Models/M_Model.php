@@ -6,9 +6,6 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class M_model extends Model
 {
-    protected $table = 'book';
-    protected $primaryKey = 'id_book';
-    protected $allowedFields = ['nama_b', 'cover', 'penulis', 'penerbit', 'tahun', 'sinopsis', 'stok', 'link', 'kategori', 'created_at'];
 
     public function getBookById($id)
     {
