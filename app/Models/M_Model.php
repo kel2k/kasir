@@ -6,7 +6,27 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class M_model extends Model
 {
+    public function kurangiJumlahBarang($id_barang, $jumlah)
+    {
+        // Ambil jumlah barang saat ini dari database
+        $jumlah_sekarang = $this->db->table('barang')->select('jumlah')->where('id_barang', $id_barang)->get()->getRow()->jumlah;
 
+        // Kurangkan jumlah barang
+        $jumlah_baru = $jumlah_sekarang - $jumlah;
+
+        // Update jumlah barang di database
+        $this->db->table('barang')->where('id_barang', $id_barang)->update(['jumlah' => $jumlah_baru]);
+    }
+
+    public function checkUsernameInDatabase($username)
+    {
+        // Perform a database query to check if the username is in use
+        // Replace this with your actual database query
+        $this->db->where('username', $username);
+        $query = $this->db->get('user');
+
+        return $query->num_rows() > 0;
+    }
     public function getBookById($id)
     {
         return $this->join('kategori', 'kategori.id_kategori = book.kategori')

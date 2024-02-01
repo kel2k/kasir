@@ -28,20 +28,12 @@ class Home extends BaseController
             session()->set('username', $cek['username']);
             session()->set('email', $cek['email']);
             session()->set('level', $cek['level']);
-            return redirect()->to('/home/dashboard');
+            return redirect()->to('/dashboard');
         } else {
             // Tambahkan kode berikut
             session()->setFlashdata('error', 'Salah password');
             return redirect()->to('/home');
         }
     }
-    public function dashboard()
-    {
-        $model = new M_model();
-        $data['totalUsers'] = $model->getTotalUsers();
-        echo view('/template/header');
-        echo view('/template/menu');
-        echo view('/dashboard/dashboard', $data);
-        echo view('/template/footer');
-    }
+
 }
