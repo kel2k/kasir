@@ -84,7 +84,7 @@
                                             <label for="password-id-icon">Nama Customer</label>
                                             <div class="position-relative">
                                                 <input type="text" class="form-control" required name="nama_customer"
-                                                    placeholder="Nama Barang" id="password-id-icon">
+                                                    placeholder="Nama Customer" id="password-id-icon">
                                                 <div class="form-control-icon">
                                                     <i class="bi bi-person-fill"></i>
                                                 </div>
